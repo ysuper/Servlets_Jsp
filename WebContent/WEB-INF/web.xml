@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>test</display-name>
+  <servlet>
+    <servlet-name>ysuper test</servlet-name>
+    <servlet-class>chapter1.Ch1Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ysuper test</servlet-name>
+    <url-pattern>/Serv1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Chapter1 Servlet</servlet-name>
+    <servlet-class>Ch1Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Chapter1 Servlet</servlet-name>
+    <url-pattern>/Serv2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Ch3 Beer</servlet-name>
+    <servlet-class>com.example.web.BeerSelect</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ch3 Beer</servlet-name>
+    <url-pattern>/SelectBeer.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>testinit</servlet-name>
+    <servlet-class>chapter5.TestInitParams</servlet-class>
+    <init-param>
+      <param-name>adminEmail</param-name>
+      <param-value>Ysuper@eton.com</param-value>
+    </init-param>
+    <init-param>
+      <param-name>mainEmail</param-name>
+      <param-value>main@eton.com</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>testinit</servlet-name>
+    <url-pattern>/cp5test</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>adminEmail</param-name>
+    <param-value>Ysuper@eton.com</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>ListenerTester</servlet-name>
+    <servlet-class>chapter5.ListenerTester</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListenerTester</servlet-name>
+    <url-pattern>/ListenTest.do</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>breed</param-name>
+    <param-value>Great Dane</param-value>
+  </context-param>
+  <listener>
+  	<listener-class>
+  		chapter5.MyServletContextListener
+  	</listener-class>
+  </listener>
+</web-app>
