@@ -58,7 +58,7 @@
     <param-value>Great Dane</param-value>
   </context-param>
   <listener>
-  	<listener-class>
+    <listener-class>
   		chapter5.MyServletContextListener
   	</listener-class>
   </listener>
