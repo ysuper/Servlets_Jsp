@@ -19,12 +19,12 @@ public class TestInitParams extends HttpServlet {
 		
 		java.util.Enumeration e = getServletConfig().getInitParameterNames();
 		while(e.hasMoreElements()) {
-			out.println( "<br>param name = "+e.nextElement()+"<br>" );
+			out.println( "param name = "+e.nextElement()+"<br>" );
 		}
-		out.println( "main email is "+getServletConfig().getInitParameter( "mainEmail" )+"<br>" );
-		out.println( "admin email is "+getServletConfig().getInitParameter( "adminEmail" )+"<br>" );
+		out.println( "<br>mainEmail is "+getServletConfig().getInitParameter( "mainEmail" )+"<br>" );
+		out.println( "adminEmail is "+getServletConfig().getInitParameter( "adminEmail" )+"<br>" );
 		
-		out.println( "admin email is "+getServletContext().getInitParameter( "adminEmail" )+"<br>" );
+		out.println( "<br>adminEmail is "+getServletContext().getInitParameter( "adminEmail" )+"<br>" );
 	}
 
 

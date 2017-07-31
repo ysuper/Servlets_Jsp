@@ -9,22 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/TestGetServletContextB")
-public class TestGetServletContextB extends HttpServlet {
+@WebServlet("/TestGetServletContextAA")
+public class TestGetServletContextAA extends HttpServlet {
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		out.println("test context attributes<br>foo=");
-
-		synchronized(getServletContext()) {
-			getServletContext().setAttribute("foo", "12");
-			try {
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			out.println(getServletContext().getAttribute("foo"));
-		}
+		
+		getServletContext().setAttribute("foo", "34");
+		out.println(getServletContext().getAttribute("foo"));
+		
 	}
 }
